@@ -1,5 +1,9 @@
 === MATHRUCK ===
 :icons: font
+:iconfont-cdn: //maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css
+:iconfont-remote!:
+:iconfont-name: fontawesome-4.1.0
+
 
 Website to archive/store, mathematics (or, any really) questions and answers as well as ability to store related ideas like 
 scratch work, whiteboard link, graphs, grids, code. Mainly built to help math.se and artofproblemsolving.com users catalogue 
