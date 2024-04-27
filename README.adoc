@@ -1,0 +1,9 @@
+=== MATHRUCK ===
+:icons: font
+
+Website to archive/store, mathematics (or, any really) questions and answers as well as ability to store related ideas like 
+scratch work, whiteboard link, graphs, grids, code. Mainly built to help math.se and artofproblemsolving.com users catalogue 
+their journey and promote revisions. Includes the ability to generate a pdf file with all the questions and answer of the user 
+in lieu of archiving.
+
+Built with icon:fan-table[] using NextJS, MongoDB, TypeScript. Using Docker 🐳 to build and deploy. 

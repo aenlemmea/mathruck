@@ -1,0 +1,31 @@
+services:
+    backend:
+        container_name: mathruck_backend
+        image: mongo:latest
+        restart: always
+        environment:
+            DB_NAME: mathruck
+            MONGO_INITDB_DATABASE: mathruck
+        ports:
+            - 27017:27017
+        volumes:
+            - "./.docker/mathruck-backend/seed-mongodb.js:/docker-entrypoint-initdb.d/seed-mongodb.js"
+            - mongodb_data_container:/data/db
+    application:
+        container_name: mathruck_frontend
+        image: node:lts-alpine
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./app:/home/node/app
+        working_dir: /home/node/app
+        command: "npm run dev"
+        depends_on:
+            - backend
+        environment:
+            - HOST=0.0.0.0
+            - CHOKIDAR_USEPOLLING=true
+            - CHOKIDAR_INTERVAL=100
+        tty: true
+volumes:
+    mongodb_data_container:
